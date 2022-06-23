@@ -1,0 +1,5 @@
+{
+    "key": "Get at https://www.weatherapi.com/",
+    "city": "Brussels",
+    "message_type": "weather"
+}

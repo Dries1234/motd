@@ -4,6 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "daemon"
+path = "src/daemon/main.rs"
+
+[[bin]]
+name = "client"
+path = "src/client/main.rs"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"]}
@@ -11,3 +18,7 @@ serde_json = { version = "1.0" }
 dirs = { version = "4.0" }
 rand = { version = "0.8" }
 colored = { version = "2.0"}
+daemonize-me = { version = "2.0" }
+reqwest = { version = "0.11", features = ["blocking", "json"]}
+chrono = { version = "0.4" }
+
