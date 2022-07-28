@@ -7,6 +7,19 @@ const GREY: Color = Color::TrueColor {
     b: (119),
 };
 
+// gruvbox colors
+const GREEN: Color = Color::TrueColor {
+    r: (142),
+    g: (192),
+    b: (124),
+};
+const BLUE: Color = Color::TrueColor {
+    r: (131),
+    g: (165),
+    b: (152),
+};
+const DARK_BLUE: Color = Color::TrueColor { r: (69), g: (133), b: (136) };
+
 const ZERO: [&str; 3] = [" __ ", "|  |", "|__|"];
 const ONE: [&str; 3] = ["    ", "   |", "   |"];
 const TWO: [&str; 3] = [" __ ", " __|", "|__ "];
@@ -204,18 +217,18 @@ impl Logger for Weather {
         let rows = clock.split("\n");
         // print the clock
         for row in rows {
-            println!("{}", row.bright_cyan());
+            println!("{}", row.color(GREEN));
         }
         println!(
             "{} {}",
-            self.location.name.blue().bold(),
-            self.location.country.blue().bold()
+            self.location.name.color(BLUE).bold(),
+            self.location.country.color(BLUE).bold()
         );
         // temperature
         println!(
             "{} {}",
             temperature_format(self.current.temp_c),
-            self.current.condition.text.blue()
+            self.current.condition.text.color(DARK_BLUE)
         );
     }
 }
