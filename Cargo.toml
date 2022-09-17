@@ -21,4 +21,3 @@ colored = { version = "2.0"}
 daemonize-me = { version = "2.0" }
 reqwest = { version = "0.11", features = ["blocking", "json"]}
 chrono = { version = "0.4" }
-

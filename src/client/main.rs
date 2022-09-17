@@ -41,6 +41,7 @@ fn load_config() -> Result<Config, Error> {
         None => {
             config_file = PathBuf::from("~/.config/motd.json");
         }
+        
     }
     let b = std::path::Path::new(&config_file).exists();
     if b {

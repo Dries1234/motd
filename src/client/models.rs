@@ -18,7 +18,11 @@ const BLUE: Color = Color::TrueColor {
     g: (165),
     b: (152),
 };
-const DARK_BLUE: Color = Color::TrueColor { r: (69), g: (133), b: (136) };
+const DARK_BLUE: Color = Color::TrueColor {
+    r: (69),
+    g: (133),
+    b: (136),
+};
 
 const ZERO: [&str; 3] = [" __ ", "|  |", "|__|"];
 const ONE: [&str; 3] = ["    ", "   |", "   |"];
